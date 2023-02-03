@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+
+}
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Prosto One', cursive;
+    
+
+}
+img {
+    max-width: 100%;
+
+}
+a {
+    text-decoration: none;
+    color: #fff;
+
+}
+a:visited {
+    color:#fff;
+}
+.container  {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px; 
+}
+.box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.box__item {
+    background-color: green;
+    height: 280px;
+    color: aliceblue;
+    border-radius: 8px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header {
+
+    background-color: blue;
+    color: #fff;
+    position: relative;
+
+    
+    
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+
+}
+/* .logo {
+    /
+} */
+.menu {
+    display: flex;
+    gap: 30px;
+
+}
+/* .phone {
+} */
+.title {
+    font-size: 26px;
+    text-align: center;
+    padding: 50px 0;
+    font-weight: 900;
+}
+/* gallery */
+.gallery {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 30px;
+
+}
+.gallery__item {
+    border-radius: 10px;
+    overflow: hidden;
+
+
+} 
+.gallery__item img {
+    height: 100%;
+}
+.footer {
+    background-color: rgb(48, 45, 45);
+    color: aliceblue;
+    font-size: 12px;
+    height: 100px;
+    margin-top: 50px;
+    text-align: center;
+     }
+    .burger-menu {
+        width: 24px;
+        height: 17px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        display: none;
+
+    }
+    .burger-menu span {
+        height: 1px;
+        width: 100%;
+        background-color: #fff;
+        display: block;
+    }
+    @media screen and (max-width: 992px) {
+        body {
+            font-size: 14px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .phone {
+            display: none;
+        }
+        .menu {
+            position: absolute;
+            flex-direction: column;
+            background-color: blue;
+            border: 1px solid white;
+            padding: 15px 25px;
+            gap: 10px;
+            right: 15px;
+            top: 60px;
+            opacity: 0;
+            visibility: hidden;
+
+        }
+        .menu.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .burger-menu {
+            display: flex;
+        }
+        
+    }
